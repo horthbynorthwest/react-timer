@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TimerButton from '../TimerButton/TimerButton';
 import './Timer.css';
 
 class Timer extends Component {
@@ -10,8 +11,30 @@ class Timer extends Component {
                 isOn: false
         };
     }
+
+    startTimer() {
+        console.log('Starting timer');
+    }
+
+    stopTimer() {
+        console.log('Stopping timer');
+    }
+
+    resetTimer() {
+        console.log('Resetting timer');
+    }
+
     render = () => {
-        return <div className="timer-container" />;
+        return (
+        <div className="timer-container">
+            <div className='time-display'></div>
+            <div className='time-button-container'>
+                <TimerButton buttonAction={this.startTimer} buttonValue={'Start'} />
+                <TimerButton buttonAction={this.stopTimer} buttonValue={'Stop'} />
+                <TimerButton buttonAction={this.resetTimer} buttonValue={'Reset'} />
+            </div>
+        </div>
+        )
     };
 }
 
