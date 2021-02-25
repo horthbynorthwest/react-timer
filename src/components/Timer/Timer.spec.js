@@ -9,6 +9,6 @@ describe('Timer', () => {
     beforeEach(() => (container = shallow(<Timer />)))
 
     it('should render a <div />', () => {
-        expect(container.find('div').length).toBeGreaterOrEqual(1)
+        expect(container.find('div').length).toBeGreaterThanOrEqual(1)
     })
 })
